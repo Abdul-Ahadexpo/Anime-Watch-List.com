@@ -1,0 +1,161 @@
+/* Base Styles */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+  max-width: 100%;
+  margin: auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.input-group {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 70%;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-color: #007bff;
+}
+
+button {
+  padding: 10px;
+  margin-left: 10px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.filters {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+
+.anime-details {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+.checkbox {
+  margin-right: 10px;
+}
+
+.favorite {
+  margin-left: 10px;
+  cursor: pointer;
+  color: gold;
+}
+
+.favorite:hover {
+  color: orange;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: red;
+  font-size: 20px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Dark Mode */
+.dark {
+  background-color: #333;
+  color: #fff;
+}
+.dark h1 {
+  color: #fff;
+}
+
+.container.dark {
+  background-color: #444;
+}
+
+button.dark {
+  background-color: #666;
+  color: white;
+}
+
+button.dark:hover {
+  background-color: #555;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+  input {
+    width: 60%;
+    padding: 8px;
+  }
+
+  button {
+    padding: 8px;
+  }
+
+  .container {
+    padding: 15px;
+  }
+
+  li {
+    padding: 8px;
+  }
+}
